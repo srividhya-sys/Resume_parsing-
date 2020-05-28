@@ -1,0 +1,24 @@
+<html>
+<head>
+<style>
+body{
+background-color:#00CCFF;
+}
+</style>
+</head>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<body>
+{% block content %}
+<center>
+<h1>## RESUME PARSER ##</h1>
+<h3><p>click to select the resume file and to upload</p></h3>
+<form name="form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="file" id="uploadFile" name="document">
+<input type="submit" value="SUBMIT">
+</form>
+</center>
+{% endblock %}
+</body>
+</html>
